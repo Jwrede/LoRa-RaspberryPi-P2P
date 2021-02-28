@@ -3,10 +3,10 @@ A fork of https://github.com/Wei1234c/SX127x_driver_for_MicroPython_on_ESP8266 t
 
 The Pins I use are:
 
-DIO0 -> 5
-DIO1 -> 6
-Reset -> 22
-SCK -> 11
-MISO -> 9
-MOSI-> 10
+DIO0 -> 5\
+DIO1 -> 6\
+Reset -> 22\
+SCK -> 11\
+MISO -> 9\
+MOSI-> 10\
 NSS -> 8 (CE0)
