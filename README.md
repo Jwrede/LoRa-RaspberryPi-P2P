@@ -11,3 +11,5 @@ MISO -> 9\
 MOSI-> 10\
 NSS -> 8 (CE0)\
 (can be changed in `controller.py`)
+
+The frequency I use: 868MHz (can be changed in `sx127x.py`)
