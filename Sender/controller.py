@@ -76,7 +76,7 @@ class Controller:
         self.transceivers[transceiver.name] = transceiver
         return transceiver
 
-    def prepare_pin(self, pin_id, in_out=None):
+    def prepare_pin(self, pin_id, in_out=GPIO.OUT):
         if pin_id is not None:
             GPIO.setup(pin_id, in_out)
             new_pin = Controller.Mock()
