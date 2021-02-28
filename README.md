@@ -8,7 +8,7 @@ DIO1 -> 6\
 Reset -> 22\
 SCK -> 11\
 MISO -> 9\
-MOSI-> 10\
+MOSI -> 10\
 NSS -> 8 (CE0)\
 (can be changed in `controller.py`)
 
