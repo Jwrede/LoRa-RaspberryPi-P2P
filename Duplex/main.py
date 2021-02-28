@@ -1,4 +1,4 @@
-import LoRaReceiver
+import LoRaDuplex
 from controller import Controller
 import sx127x
 import gc
@@ -11,7 +11,7 @@ def main():
                                       pin_id_ss=Controller.PIN_ID_FOR_LORA_SS,
                                       pin_id_RxDone=Controller.PIN_ID_FOR_LORA_DIO0)
 
-    LoRaReceiver.receive(lora)
+    LoRaDuplex.duplex(lora)
 
 
 if __name__ == '__main__':
