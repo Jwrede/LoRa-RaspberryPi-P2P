@@ -1,3 +1,5 @@
+import time
+
 def millisecond(): return time.time() * 1000
 
 
