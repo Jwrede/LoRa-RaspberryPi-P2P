@@ -1,5 +1,6 @@
 import time
 
+
 def millisecond(): return time.time() * 1000
 
 
@@ -10,10 +11,11 @@ INTERVAL_BASE = 2000  # interval between sends base
 
 def duplex(lora):
     print("LoRa Duplex")
-    do_loop(lora)
+    f = open("/home/pi/data")
+    do_loop(lora, f)
 
 
-def do_loop(lora):
+def do_loop(lora, f):
     global msgCount
 
     lastSendTime = 0
@@ -33,7 +35,7 @@ def do_loop(lora):
             msgCount += 1
 
             # parse for a packet, and call onReceive with the result:
-        receive(lora)
+        receive(lora, f)
 
 
 def sendMessage(lora, outgoing):
@@ -41,13 +43,13 @@ def sendMessage(lora, outgoing):
     print("Sending message:\n{}\n".format(outgoing))
 
 
-def receive(lora):
+def receive(lora, f):
     if lora.receivedPacket():
         lora.blink_led()
 
         try:
             payload = lora.read_payload()
-            print("*** Received message ***\n{}".format(payload.decode()))
+            f.write(payload.decode() + "\n")
         except Exception as e:
             print(e)
         print("with RSSI {}\n".format(lora.packetRssi()))
