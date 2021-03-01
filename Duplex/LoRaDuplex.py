@@ -11,7 +11,7 @@ INTERVAL_BASE = 2000  # interval between sends base
 
 def duplex(lora):
     print("LoRa Duplex")
-    f = open("/home/pi/data")
+    f = open("/home/pi/data", "a")
     do_loop(lora, f)
 
 
