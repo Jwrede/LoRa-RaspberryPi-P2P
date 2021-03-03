@@ -42,7 +42,7 @@ def sendMessage(lora, outgoing):
     print("Sending message:\n{}\n".format(outgoing))
 
 
-def receive(lora, f):
+def receive(lora):
     if lora.receivedPacket():
         lora.blink_led()
 
